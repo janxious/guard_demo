@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class PostTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "can't create post without some properties" do
+    assert ! Post.create.valid?
+  end
+  
+  test "author required" do
+    assert Post.create(:author => "famous blogger").valid?
+  end
 end
