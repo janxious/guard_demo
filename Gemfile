@@ -11,7 +11,7 @@ gem 'awesome_print'
 group :development, :test do
   gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
   gem 'guard-test'
-  gem 'guard-livereload'
+  gem 'guard-livereload' # firefox4 - about:config - set network.websocket.override-security-block to true.
 end
 
 group :test do
