@@ -5,8 +5,8 @@ guard 'livereload' do
   watch(%r{app/.+\.(erb|haml)})
   watch(%r{app/helpers/.+\.rb})
   watch(%r{public/.+\.(css|js|html)})
-#   watch(%r{app/assets/stylesheets/.+\.(scss|css|sass)})
-#   watch(%r{app/assets/javascripts/.+\.(js|coffee)})
+  watch(%r{app/assets/stylesheets/.+\.(scss|css|sass)})
+  watch(%r{app/assets/javascripts/.+\.(js|coffee)})
   watch(%r{config/locales/.+\.yml})
 end
 
@@ -16,8 +16,8 @@ guard 'test' do
   watch('test/test_helper.rb') { "test" }
 
   # Rails example
-  watch(%r{app/models/(.*)\.rb})                     { |m| "test/unit/#{m[1]}_test.rb" }
-  watch(%r{app/controllers/(.*)\.rb})                { |m| "test/functional/#{m[1]}_test.rb" }
-  watch(%r{app/views/.*\.rb})                        { "test/integration" }
+  watch(%r{app/models/(.*)\.rb})      { |m| "test/unit/#{m[1]}_test.rb" }
+  watch(%r{app/controllers/(.*)\.rb}) { |m| "test/functional/#{m[1]}_test.rb" }
+  watch(%r{app/views/.*\.rb})         { "test/integration" }
   watch('app/controllers/application_controller.rb') { ["test/functional", "test/integration"] }
 end

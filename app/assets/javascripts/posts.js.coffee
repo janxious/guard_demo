@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-# tell_me = (message) ->
-#   alert message
+tell_me = (message) ->
+  alert message
 
-# tell_me "foo"
+tell_me "foo"

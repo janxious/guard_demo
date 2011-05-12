@@ -6,6 +6,8 @@ class PostTest < ActiveSupport::TestCase
   end
   
   test "author required" do
-    assert Post.create(:author => "famous blogger").valid?
+    post = Post.create(:author => "famous blogger")
+    assert post.valid?
+    assert post.author == "famous blogger"
   end
 end
